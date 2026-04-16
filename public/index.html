@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Automated Design Deployment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Automated Design Deployment</h2>
+  <div id="app">윈도우 프로그램 초기화면입니다.</div>
+  <div class="main-container">
+    <div class="left-panel">
+      <div id="main-content-scroll" style="height:calc(100vh - 60px);overflow:auto;">
+        <div id="nav-bar" style="margin-bottom:8px;"></div>
+        <div id="file-list"></div>
+        <div id="favorite-list" style="overflow-x:scroll;white-space:nowrap;min-height:32px;max-height:60px;background:#23272e;border:1px solid #444;padding:6px 4px 6px 8px;border-radius:6px;"></div>
+      </div>
+    </div>
+    <div class="right-panel">
+      <input type="file" id="file-input" style="display:none;" />
+      <button id="attach-btn" disabled>파일 첨부</button>
+      <button id="apply-btn" disabled>변경하기</button>
+      <div class="editor-flex-row">
+        <div id="diff-view-wrapper"></div>
+        <div id="editor-view-wrapper"></div>
+      </div>
+    </div>
+    <div class="server-panel">
+      <label>서버 주소(IP:포트):
+        <input id="server-address" value="http://localhost:4000" style="width:220px" list="server-datalist">
+        <datalist id="server-datalist"></datalist>
+      </label>
+      <button id="connect-btn">접속</button>
+      <div id="saved-server-list"></div>
+    </div>
+  </div>
+  <div id="status-message"></div>
+  <style>
+    /* 로그 패널을 다시 보이게 수정 */
+    #log-panel { display: block !important; }
+  </style>
+  <!-- <div id="log-panel"></div> -->
+  <script src="renderer.js"></script>
+</body>
+</html>

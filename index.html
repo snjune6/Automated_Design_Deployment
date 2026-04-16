@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Automated Design Deployment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Automated Design Deployment</h2>
+  <div id="app">윈도우 프로그램 초기화면입니다.</div>
+  <div style="display:flex;">
+    <div style="flex:0 0 320px;display:flex;flex-direction:column;">
+      <div id="file-list"></div>
+      <div id="favorite-list" style="margin:10px 0;"></div>
+    </div>
+    <div>
+      <input type="file" id="file-input" style="display:none;" />
+      <button id="attach-btn" disabled>파일 첨부</button>
+      <button id="apply-btn" disabled>변경하기</button>
+      <div id="diff-view-wrapper"></div>
+    </div>
+  </div>
+  <div>
+    <label>서버 주소(IP:포트):
+      <input id="server-address" value="http://localhost:4000" style="width:220px" list="server-datalist">
+      <datalist id="server-datalist"></datalist>
+    </label>
+    <button id="connect-btn">접속</button>
+    <div id="saved-server-list" style="margin-top:8px;"></div>
+  </div>
+  <div id="status-message"></div>
+  <div id="log-panel"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

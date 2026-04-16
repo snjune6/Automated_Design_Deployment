@@ -1,0 +1,4 @@
+/node_modules/
+/dist/
+/.idea/
+/app-data.json
