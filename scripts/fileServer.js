@@ -34,6 +34,11 @@ app.get('/files', (req, res) => {
 // 파일 읽기
 app.get('/file', (req, res) => {
   const filePath = req.query.filePath;
+  console.log('[SERVER] filePath:', filePath); // 디버깅용 로그
+  if (!filePath || typeof filePath !== 'string') {
+    res.json({ success: false, error: 'filePath 파라미터가 올바르지 않습니다.', filePath });
+    return;
+  }
   try {
     const ext = path.extname(filePath).toLowerCase();
     const imageExts = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp', '.svg'];

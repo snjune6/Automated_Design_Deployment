@@ -2,3 +2,5 @@
 /dist/
 /.idea/
 /app-data.json
+/react-app/node_modules/
+/react-app/dist/

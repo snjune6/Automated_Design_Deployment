@@ -1,0 +1,4 @@
+public/index.html
+public/renderer.js
+public/style.css
+

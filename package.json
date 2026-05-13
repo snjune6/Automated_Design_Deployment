@@ -1,12 +1,12 @@
 {
   "name": "automated-design-deployment",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "file-server": "node src/infra/fileServer.js",
+    "file-server": "node scripts/fileServer.js",
     "kill-4000": "node scripts/kill-4000.js",
     "dist": "electron-builder --win nsis portable"
   },
@@ -31,6 +31,7 @@
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",
     "diff": "^9.0.0",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^3.0.5"
   }
 }

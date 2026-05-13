@@ -1,0 +1,10 @@
+위 파일들은 더 이상 Electron+React 환경에서 사용되지 않으므로 안전하게 삭제해도 됩니다.
+
+- public/index.html: 구형 UI, React에서는 사용하지 않음
+- public/renderer.js: 구형 UI, React에서는 사용하지 않음
+- public/style.css: React에서 import하지 않으면 삭제 가능
+
+src/ui, src/func/renderer.js에서만 쓰던 코드도 React로 이식되지 않았다면 삭제해도 됩니다.
+
+react-app/ 이하와 main.js, src/func 등 Electron/서버/비즈니스 로직은 남겨두세요.
+
